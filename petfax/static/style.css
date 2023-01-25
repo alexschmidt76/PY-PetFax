@@ -1,3 +1,74 @@
 body {
-    background-color: blue;
+    padding-left: 25%;
+    padding-right: 25%;
+    background-color: #d6a2ad;
+}
+
+h1 {
+    text-align: center;
+    font-family: impact, sans-serif;
+    color: #7F6ADA;
+    font-size: 500%;
+}
+
+h2 {
+    color: #169873;
+    font-family: impact, sans-serif;
+    text-align: center;
+    font-size: 300%;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+hr {
+    height: 1px;
+    background-color: black;
+    border: none;
+}
+
+.page-contents {
+    background-color: #F7E7CD;
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-top: 0;
+    padding-bottom: 1em;
+    border: 1px solid black;
+    box-shadow: 5px 5px 15px gray;
+    border-radius: 2em;
+}
+
+.pets-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: auto;
+}
+
+.pet-card {
+    width: 45%;
+    margin: auto;
+    text-align: center;
+    font-size: x-large;
+}
+
+.pet-image {
+    width: 90%;
+    border-radius: 2em;
+    margin: auto;
+    margin-bottom: 5px;
+}
+
+.show-contents {
+    width: 90%;
+    text-align: center;
+    font-size: x-large;
+    margin: auto;
+}
+
+.back-btn {
+    font-size: x-large;
+    background-color: #8dffb9;
+    border: 1px solid black;
+    border-radius: 10px;
+    cursor: pointer;
 }

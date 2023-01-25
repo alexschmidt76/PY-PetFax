@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+    <title>Document</title>
+</head>
+<body>
+    <div class="page-contents">
+        <h1>{{ pet.pet_name }}</h1>
+        <hr>
+        <div class="show-contents">
+            <h4><b>Did you know?</b></h4>
+            <p>{{ pet.pet_fact }}</p>
+            <img class="pet-image" src="{{ pet.pet_photo }}" alt="Photo of {{ pet.pet_name }}" />
+            <form action="/pets">
+                <input class="back-btn" type="submit" value="Go Back">
+            </form>
+        </div>
+    </div>
+</body>
+</html>

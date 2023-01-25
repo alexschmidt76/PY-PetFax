@@ -20,4 +20,4 @@ def info(pet_id):
         print('Pet not found')
         return render_template('index.html', pets=pets)
     else:
-        return render_template('info.html', pet=found_pet)
+        return render_template('show.html', pet=found_pet)
