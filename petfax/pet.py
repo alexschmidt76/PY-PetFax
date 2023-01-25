@@ -6,7 +6,7 @@ pets = json.load(open('pets.json'))
 
 @bp.route('/')
 def index():
-    return render_template('index.html', pets=pets)
+    return render_template('index.html.j2', pets=pets)
 
 @bp.route('/<int:pet_id>')
 def info(pet_id):
@@ -18,6 +18,6 @@ def info(pet_id):
     # if for some reason the pet is not found, print to console and render index page
     if found_pet is None:
         print('Pet not found')
-        return render_template('index.html', pets=pets)
+        return render_template('index.html.j2', pets=pets)
     else:
-        return render_template('show.html', pet=found_pet)
+        return render_template('show.html.j2', pet=found_pet)

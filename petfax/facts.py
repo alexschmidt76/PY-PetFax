@@ -6,4 +6,4 @@ pets = json.load(open('pets.json'))
 
 @bp.route('/new')
 def new():
-    return render_template('new.html', pets=pets)
+    return render_template('new.html.j2', pets=pets)

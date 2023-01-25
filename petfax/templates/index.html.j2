@@ -1,13 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
-    <title>Document</title>
-</head>
-<body>
+{% extends "base.html.j2" %}
+{% block title %}Homepage{% endblock %}
+{% block head %}
+    {{ super() }}
+{% endblock %}
+{% block content %}
     <div class="page-contents">
         <h1>Welcome to PetFax</h1>
         <hr>
@@ -24,5 +20,4 @@
             <input class="new-fact-btn" type="submit" value="Sumbit a new fact about one of our pets here!" />
         </form>
     </div>
-</body>
-</html>
+{% endblock %}
