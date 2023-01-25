@@ -1,7 +1,7 @@
 from flask import (Blueprint, render_template)
 import json
 
-bp = Blueprint('pet', __name__, url_prefix='/pets')
+bp = Blueprint('pets', __name__, url_prefix='/pets')
 pets = json.load(open('pets.json'))
 
 @bp.route('/')
