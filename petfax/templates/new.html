@@ -8,16 +8,23 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Submit a New Fact!</h1>
-    <form>
-        <label for="petName">Pet Name:</label><br>
-        <input name="petName" type="text" /><br>
-        <label for="fact">New Fact:</label><br>
-        <input name="fact" type="text" /><br>
-        <label for="submitter">Submitter Name:</label><br>
-        <input name="submitter" type="text" /><br>
-        <input type="submit" value="Submit" />
-    </form>
-    <p>(<a href="/pets">Go Back</a>)</p>
+    <div class="page-contents">
+        <h1>Submit a New Fact!</h1>
+        <hr>
+        <div class="new-fact-contents">
+            <form>
+                <label for="pet-name">Pet Name:</label><br>
+                <input name="pet-name" type="text" /><br>
+                <label for="fact">New Fact:</label><br>
+                <textarea rows="4" cols="50" placeholder="Enter your pet fact here!" style="resize: none;"></textarea><br>
+                <label for="submitter-name">Your Name:</label><br>
+                <input name="submitter-name" type="text" /><br>
+                <input class="new-fact-btn" type="submit" value="Submit Fact" />
+            </form>
+        </div>
+        <form action="/pets">
+            <input class="back-btn" type="submit" value="Go Back" />
+        </form>
+    </div>
 </body>
 </html>

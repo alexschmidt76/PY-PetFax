@@ -35,6 +35,7 @@ hr {
     border: 1px solid black;
     box-shadow: 5px 5px 15px gray;
     border-radius: 2em;
+    text-align: center;
 }
 
 .pets-container {
@@ -65,10 +66,24 @@ hr {
     margin: auto;
 }
 
-.back-btn {
+.back-btn,
+.new-fact-btn {
     font-size: x-large;
     background-color: #8dffb9;
     border: 1px solid black;
     border-radius: 10px;
     cursor: pointer;
+}
+
+.new-fact-contents {
+    font-size: x-large;
+}
+
+.new-fact-contents input {
+    margin-bottom: 1em;
+}
+
+#new-fact-input {
+    width: 100px;
+    height: 200px;
 }
