@@ -7,6 +7,7 @@ pets = json.load(open('pets.json'))
 
 @bp.route('/', methods=['GET', 'POST'])
 def index():
+    # POST route
     if request.method == 'POST':
         submitter = request.form['submitter']
         fact = request.form['fact']
@@ -16,8 +17,11 @@ def index():
         models.db.session.commit()
 
         return redirect('/facts')
-        
-    return render_template('facts/index.html.j2')
+    
+    # GET route
+    results = models.Fact.query.all()
+    
+    return render_template('facts/index.html.j2', facts=results)
 
 @bp.route('/new')
 def new():
