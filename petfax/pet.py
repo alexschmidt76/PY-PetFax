@@ -1,4 +1,4 @@
-from flask import (Blueprint, render_template)
+from flask import (Blueprint, render_template, redirect)
 import json
 
 bp = Blueprint('pets', __name__, url_prefix='/pets')
@@ -18,6 +18,6 @@ def info(pet_id):
     # if for some reason the pet is not found, print to console and render index page
     if found_pet is None:
         print('Pet not found')
-        return render_template('index.html.j2', pets=pets)
+        return redirect('/pets')
     else:
         return render_template('show.html.j2', pet=found_pet)

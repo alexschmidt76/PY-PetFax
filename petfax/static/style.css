@@ -9,6 +9,8 @@ h1 {
     font-family: impact, sans-serif;
     color: #7F6ADA;
     font-size: 500%;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 
 h2 {
@@ -16,6 +18,14 @@ h2 {
     font-family: impact, sans-serif;
     text-align: center;
     font-size: 300%;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+h4 {
+    color: #169873;
+    font-size: 200%;
+    font-family: impact, sans-serif;
     margin-top: 0;
     margin-bottom: 0;
 }
@@ -66,24 +76,47 @@ hr {
     margin: auto;
 }
 
-.back-btn,
-.new-fact-btn {
-    font-size: x-large;
-    background-color: #8dffb9;
+.back-btn {
+     font-size: x-large;
+    background-color: #7F6ADA;
     border: 1px solid black;
     border-radius: 10px;
     cursor: pointer;
 }
 
-.new-fact-contents {
+.new-fact-btn {
+    background-color: #8dffb9;
     font-size: x-large;
+    border: 1px solid black;
+    border-radius: 10px;
+    cursor: pointer;
 }
 
-.new-fact-contents input {
+#new-fact-form {
+    width: 75%;
+    margin: auto;
+    text-align: left;
+}
+
+#new-fact-form input,
+#new-fact-form textarea {
     margin-bottom: 1em;
+    width: 100%;
+    border-radius: .75em;
+    border-color: black;
 }
 
-#new-fact-input {
-    width: 100px;
-    height: 200px;
+#new-fact-form label {
+    font-family: impact, sans-serif;
+    font-size: x-large;
+    color: #169873;
+}
+
+#new-fact-form input {
+    height: 2em;
+    font-size: larger;
+}
+
+#new-fact-form textarea {
+    font-size: x-large;
 }

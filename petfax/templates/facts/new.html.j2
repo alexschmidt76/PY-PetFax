@@ -5,16 +5,14 @@
 {% endblock %}
 {% block content %}
     <div class="page-contents">
-        <h1>Submit a New Fact!</h1>
+        <h1>Submit New Fax!</h1>
         <hr>
         <div class="new-fact-contents">
-            <form>
-                <label for="pet-name">Pet Name:</label><br>
-                <input name="pet-name" type="text" /><br>
+            <form id="new-fact-form" action="/facts" method="POST">
+                <label for="submitter">Name:</label><br>
+                <input name="submitter" type="text" /><br>
                 <label for="fact">New Fact:</label><br>
-                <textarea rows="4" cols="50" placeholder="Enter your pet fact here!" style="resize: none;"></textarea><br>
-                <label for="submitter-name">Your Name:</label><br>
-                <input name="submitter-name" type="text" /><br>
+                <textarea name="fact" rows="4" placeholder="Enter your pet fact here!" style="resize: none;"></textarea><br>
                 <input class="new-fact-btn" type="submit" value="Submit Fact" />
             </form>
         </div>
