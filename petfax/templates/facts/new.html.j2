@@ -4,20 +4,18 @@
     {{ super() }}
 {% endblock %}
 {% block content %}
-    <div class="page-contents">
-        <h1>Submit New Fax!</h1>
-        <hr>
-        <div class="new-fact-contents">
-            <form id="new-fact-form" action="/facts" method="POST">
-                <label for="submitter">Name:</label><br>
-                <input name="submitter" type="text" /><br>
-                <label for="fact">New Fact:</label><br>
-                <textarea name="fact" rows="4" placeholder="Enter your pet fact here!" style="resize: none;"></textarea><br>
-                <input class="new-fact-btn" type="submit" value="Submit Fact" />
-            </form>
-        </div>
-        <form action="/pets">
-            <input class="back-btn" type="submit" value="Go Back" />
+    <h1>Submit New Fax!</h1>
+    <hr>
+    <div class="new-fact-contents">
+        <form id="new-fact-form" action="/facts" method="POST">
+            <label for="submitter">Name:</label><br>
+            <input name="submitter" type="text" /><br>
+            <label for="fact">New Fact:</label><br>
+            <textarea name="fact" rows="4" placeholder="Enter your pet fact here!" style="resize: none;"></textarea><br>
+            <input class="new-fact-btn" type="submit" value="Submit Fact" />
         </form>
     </div>
+    <form action="/pets">
+        <input class="back-btn" type="submit" value="Go Back" />
+    </form>
 {% endblock %}

@@ -4,20 +4,18 @@
     {{ super() }}
 {% endblock %}
 {% block content %}
-    <div class="page-contents">
-        <h1>Welcome to PetFax</h1>
-        <hr>
-        <div class="pets-container">
-            {% for pet in pets %}
-            <div class="pet-card">
-                <h2>{{ pet.pet_name }}</h2>
-                <img class="pet-image" src="{{ pet.pet_photo }}" alt="Photo of {{ pet.pet_name }}" />
-                <p>Click <a href="/pets/{{ pet.pet_id }}">here</a> to learn more about {{ pet.pet_name }}!</p>
-            </div>
-            {% endfor %}
+    <h1>Welcome to PetFax</h1>
+    <hr>
+    <div class="pets-container">
+        {% for pet in pets %}
+        <div class="pet-card">
+            <h2>{{ pet.pet_name }}</h2>
+            <img class="pet-image" src="{{ pet.pet_photo }}" alt="Photo of {{ pet.pet_name }}" />
+            <p>Click <a href="/pets/{{ pet.pet_id }}">here</a> to learn more about {{ pet.pet_name }}!</p>
         </div>
-        <form action="/facts/new">
-            <input class="new-fact-btn" type="submit" value="Sumbit a new fact about one of our pets here!" />
-        </form>
+        {% endfor %}
     </div>
+    <form action="/facts/new">
+        <input class="new-fact-btn" type="submit" value="Sumbit a new fact about one of our pets here!" />
+    </form>
 {% endblock %}

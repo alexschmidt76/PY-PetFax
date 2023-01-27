@@ -1,12 +1,12 @@
 from flask import (Blueprint, render_template, redirect)
 import json
 
-bp = Blueprint('pets', __name__, url_prefix='/pets')
+bp = Blueprint('pet', __name__, url_prefix='/pets')
 pets = json.load(open('pets.json'))
 
 @bp.route('/')
 def index():
-    return render_template('index.html.j2', pets=pets)
+    return render_template('pets/index.html.j2', pets=pets)
 
 @bp.route('/<int:pet_id>')
 def info(pet_id):
@@ -20,4 +20,4 @@ def info(pet_id):
         print('Pet not found')
         return redirect('/pets')
     else:
-        return render_template('show.html.j2', pet=found_pet)
+        return render_template('pets/show.html.j2', pet=found_pet)
