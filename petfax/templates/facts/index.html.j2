@@ -5,4 +5,9 @@
 {% endblock %}
 {% block content %}
     <h1>User Fax</h1>
+    <hr>
+    {% for fact in facts %}
+        <h4>Submitted by {{ fact.submitter }}</h4>
+        <p>{{ fact.fact }}</p>
+    {% endfor %}
 {% endblock %}
